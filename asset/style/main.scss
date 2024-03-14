@@ -464,11 +464,13 @@ li {
     width: vw(358);
     border-radius: vw(24);
     margin-bottom: vw(21);
-    box-shadow: 0 vw(3) vw(8) #ddd;
+    box-shadow: 0 vw(5) vw(10) #ddd;
 
     @include pc {
         width: mvw(369);
         margin-bottom: 0;
+        border-radius: mvw(24);
+        box-shadow: 0 mvw(5) mvw(10) #ddd;
     }
 
     &:last-of-type {
@@ -496,7 +498,7 @@ li {
         @include pc {
             font-size: mvw(19);
             padding: mvw(12) mvw(20);
-            border-radius: 0 0 mvw(24);
+            border-radius: 0 0 mvw(24) mvw(24);
             line-height: 1.75;
         }
     }
