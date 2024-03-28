@@ -1,4 +1,3 @@
-
 $(function () {
 
     // ハンバーガーメニュー
@@ -6,8 +5,12 @@ $(function () {
         $('.global-nav').toggleClass('open');
     });
 
-    $(".gnav-list__item a").on("click", function () {
-        $('.global-nav').toggleClass('open');
+    $(".gnav-list__item").on("click", function () {
+        $('.global-nav').removeClass('open');
+    });
+
+    $(window).on('resize', function () {
+        $('.global-nav').removeClass('open');
     });
 
     //スワイパー
@@ -26,15 +29,8 @@ $(function () {
     //アコーディオン
     $(".accordion-q").click(function () {
         $(this).next().slideToggle();
-    });
-
-    $('.accordion-q').click(function () {
         $(this).toggleClass('open');
     });
-
-
-
-
 
 });
 

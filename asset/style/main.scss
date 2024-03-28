@@ -130,7 +130,7 @@ li {
     }
 }
 
-.subpage-sectiontitle {
+.subpage-section-title {
     font-size: vw(22);
     font-weight: 700;
     text-align: left;
@@ -249,7 +249,6 @@ li {
     border-radius: vw(24);
     background-color: #168352;
     padding: vw(40);
-    color: #fff;
     font-size: vw(18);
     font-weight: 700;
 
@@ -274,6 +273,18 @@ li {
         @include pc {
             flex-direction: row;
             gap: mvw(38);
+        }
+
+        &__item {
+            color: #fff;
+        }
+
+        &__item a{
+            color: #fff;
+
+            @include pc {
+                color: #000;
+            }
         }
 
         &__item.selected {
@@ -313,7 +324,7 @@ li {
         padding-top: mvw(42);
     }
 
-    &__main {
+    &-main {
         @include pc {
             display: flex;
             justify-content: space-between;
@@ -321,7 +332,7 @@ li {
             margin-bottom: mvw(32);
         }
 
-        .cover__catch {
+        &__catch {
             font-size: vw(28);
             font-weight: 700;
             margin-bottom: vw(19);
@@ -333,7 +344,7 @@ li {
             }
         }
 
-        .cover__text {
+        &__text {
             font-size: vw(15);
             line-height: 1.75;
             line-break: anywhere;
@@ -349,7 +360,7 @@ li {
         }
     }
 
-    &__picture {
+    &-picture {
         width: 100%;
 
         img {
@@ -381,20 +392,20 @@ li {
 
 .about-text {
     width: 100%;
-    padding: vw(15) vw(24);
+    padding: vw(15) vw(24) vw(16);
     background-color: rgb(255, 255, 255, .8);
     border-radius: vw(32);
 
     @include pc {
         width: mvw(453);
-        padding: mvw(99) mvw(24);
+        padding: mvw(99) mvw(24) mvw(99);
     }
 
     &__top {
         font-size: vw(18);
         font-weight: 700;
         line-height: 1.75;
-        margin-bottom: vw(9);
+        margin-bottom: vw(8);
 
         @include pc {
             font-size: mvw(20);
@@ -515,7 +526,7 @@ li {
 
     .section-title {
         padding-top: vw(52);
-        padding-bottom: vw(12);
+        padding-bottom: vw(18);
 
         @include pc {
             padding-top: mvw(59);
@@ -523,8 +534,11 @@ li {
         }
 
         &__ja {
-            line-height: 1.8;
-            margin-right: mvw(5);
+            line-height: 1.5;
+
+            @include pc {
+                margin-right: mvw(5);
+            }
         }
     }
 }
@@ -787,14 +801,14 @@ li {
 /* news
 ------------------------------------------ */
 .news {
-    padding: 0 vw(16) vw(61);
+    padding: 0 vw(16) vw(60);
 
     @include pc {
         padding: 0 mvw(16) mvw(69);
     }
 
     .section-title {
-        padding: vw(50) 0 vw(19);
+        padding: vw(50) 0 vw(20);
 
         @include pc {
             padding: mvw(56) 0 mvw(21);
@@ -879,7 +893,7 @@ li {
     font-size: vw(18);
     font-weight: 700;
     background-color: #09947b;
-    margin: vw(27) auto 0;
+    margin: vw(26) auto 0;
     padding-bottom: vw(2);
     box-shadow: 0 vw(5) 0 #168352;
 
@@ -918,20 +932,35 @@ li {
 
     &__link {
         display: inline-block;
-        border-right: 1px solid #fff;
         color: #fff;
+        margin-right: vw(17);
+        padding-left: 0;
 
         @include pc {
-            padding-right: mvw(22);
-            padding-left: 0;
+            margin-right: mvw(22);
         }
 
         &:last-of-type {
-            border-right: none;
+            margin-left: vw(17);
+            margin-right: 0;
+            position: relative;
+
+            &::before {
+                content: "";
+                height: 100%;
+                border: solid 1px #fff;
+                position: absolute;
+                top: 0;
+                left: vw(-17);
+
+                @include pc {
+                    left: mvw(-20);
+                }
+            }
 
             @include pc {
                 font-size: mvw(14);
-                padding-left: mvw(20);
+                margin-left: mvw(20);
                 padding-right: 0;
             }
         }
@@ -1098,12 +1127,12 @@ li {
 /* feature
 ------------------------------------------ */
 .feature {
-    padding: 0 vw(16) vw(50);
+    padding: 0 vw(16) vw(51);
 
     @include pc {
         width: mvw(800);
         margin: auto;
-        padding: 0 0 mvw(19);
+        padding: 0 0 mvw(20);
     }
 }
 
@@ -1131,7 +1160,7 @@ li {
         margin-bottom: vw(8);
 
         @include pc {
-            margin-bottom: mvw(8);
+            margin-bottom: mvw(7);
         }
     }
 
@@ -1160,7 +1189,7 @@ li {
         padding: 0 0 mvw(56);
     }
 
-    .subpage-sectiontitle {
+    .subpage-section-title {
         margin-bottom: vw(23);
 
         @include pc {
@@ -1253,7 +1282,7 @@ li {
 
     &__term {
         width: 100%;
-        height: vw(38);
+        height: vw(39);
         padding: 0 vw(19);
         background-color: #f5f5f5;
         border-top: solid 1px #ddd;
@@ -1278,7 +1307,7 @@ li {
 
     &__desc {
         width: 100%;
-        height: vw(40);
+        height: vw(39);
         padding: 0 0 0 vw(19);
         display: flex;
         align-items: center;
@@ -1286,7 +1315,7 @@ li {
 
         @include pc {
             width: calc((538 / 738) * 100%);
-            padding-left: mvw(24);
+            padding-left: mvw(21);
             height: mvw(63);
             border-bottom: solid 1px #ddd;
             font-size: mvw(16);
@@ -1516,7 +1545,10 @@ li {
             }
 
             .accordion-q {
-                margin-bottom: mvw(17);
+                @include pc {
+                    margin-bottom: mvw(17);
+                }
+
             }
 
             .accordion-q__lead {
@@ -1545,7 +1577,9 @@ li {
             }
 
             .accordion-q {
-                margin-bottom: mvw(17);
+                @include pc {
+                    margin-bottom: mvw(17);
+                }
             }
 
             .accordion-q__text {
@@ -1676,6 +1710,7 @@ li {
 
 .accordion-q {
     position: relative;
+    cursor: pointer;
 
     @include pc {
         margin-bottom: mvw(13);
@@ -1790,7 +1825,7 @@ li {
     position: relative;
     top: vw(-1);
     line-break: anywhere;
-    display: none;
+    //display: none;
 
     @include pc {
         font-size: mvw(16);
