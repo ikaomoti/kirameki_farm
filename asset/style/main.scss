@@ -1825,7 +1825,7 @@ li {
     position: relative;
     top: vw(-1);
     line-break: anywhere;
-    //display: none;
+    display: none;
 
     @include pc {
         font-size: mvw(16);

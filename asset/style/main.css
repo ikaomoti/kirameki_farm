@@ -1875,6 +1875,7 @@ li {
   position: relative;
   top: -0.2564102564vw;
   line-break: anywhere;
+  display: none;
 }
 @media screen and (min-width: 768px) {
   .accordion-a {
