@@ -27,10 +27,10 @@ $(function () {
     });
 
     //アコーディオン
-    $(".accordion-q").click(function () {
+    $(".accordion__q").click(function () {
         $(this).next().slideToggle();
         $(this).toggleClass('open');
     });
-
+    
 });
 
