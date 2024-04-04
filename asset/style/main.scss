@@ -1533,11 +1533,9 @@ li {
     line-height: 1.75;
     position: relative;
     top: vw(-1);
-    line-break: anywhere;
     display: none;
 
     @include pc {
         font-size: mvw(16);
-        line-break: anywhere;
     }
 }

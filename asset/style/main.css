@@ -1595,12 +1595,10 @@ li {
   line-height: 1.75;
   position: relative;
   top: -0.2564102564vw;
-  line-break: anywhere;
   display: none;
 }
 @media screen and (min-width: 768px) {
   .accordion__a {
     font-size: min(1.3333333333vw, 1rem);
-    line-break: anywhere;
   }
 }/*# sourceMappingURL=main.css.map */
